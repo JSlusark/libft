@@ -6,11 +6,11 @@
 /*   By: jessica <jessica@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:52:36 by jslusark          #+#    #+#             */
-/*   Updated: 2024/04/22 14:26:38 by jessica          ###   ########.fr       */
+/*   Updated: 2024/04/22 14:41:22 by jessica          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char ft_tolower(char type)
+int ft_tolower(int type)
 {
     if (type >= 'a' && type <= 'z')
     {
