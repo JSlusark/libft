@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jessica <jessica@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:25:48 by jslusark          #+#    #+#             */
-/*   Updated: 2024/04/19 17:50:26 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/04/22 16:04:58 by jessica          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(char type)
+int ft_isalpha(int type)
 {
 	if ((type >= 'a' && type <= 'z') || (type >= 'A' && type <= 'Z'))
 	{

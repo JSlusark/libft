@@ -6,11 +6,11 @@
 /*   By: jessica <jessica@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:48:14 by jslusark          #+#    #+#             */
-/*   Updated: 2024/04/22 14:00:21 by jessica          ###   ########.fr       */
+/*   Updated: 2024/04/22 16:05:12 by jessica          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalpha(char type)
+int ft_isalpha(int type)
 {
 	if (type >= ' ' && type <= '~') // or 32 vs 126
 	{

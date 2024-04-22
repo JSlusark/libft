@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jessica <jessica@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:48:10 by jslusark          #+#    #+#             */
-/*   Updated: 2024/04/19 17:50:30 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/04/22 16:05:03 by jessica          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(char type)
+int ft_isalpha(int type)
 {
 	if (type >= 0 && type <= 127)
 	{
