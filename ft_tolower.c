@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jessica <jessica@student.42.fr>            +#+  +:+       +#+        */
+/*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:52:25 by jslusark          #+#    #+#             */
-/*   Updated: 2024/04/22 14:41:17 by jessica          ###   ########.fr       */
+/*   Updated: 2024/04/23 12:24:45 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_tolower(int type)
+int	ft_tolower(int type)
 {
 	if (type >= 'A' && type <= 'Z')
 	{

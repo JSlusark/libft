@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jessica <jessica@student.42.fr>            +#+  +:+       +#+        */
+/*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:52:36 by jslusark          #+#    #+#             */
-/*   Updated: 2024/04/22 16:04:01 by jessica          ###   ########.fr       */
+/*   Updated: 2024/04/23 12:24:58 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_tolower(int type)
+int	ft_tolower(int type)
 {
-    if (type >= 'a' && type <= 'z')
-    {
-        return (type - 32);
-    }
-    return (type);
+	if (type >= 'a' && type <= 'z')
+	{
+		return (type - 32);
+	}
+	return (type);
 }

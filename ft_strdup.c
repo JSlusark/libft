@@ -1,20 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/19 15:48:10 by jslusark          #+#    #+#             */
-/*   Updated: 2024/04/23 12:16:34 by jslusark         ###   ########.fr       */
+/*   Created: 2024/04/18 17:59:20 by jslusark          #+#    #+#             */
+/*   Updated: 2024/04/23 12:51:32 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int type)
+#include <stdlib.h>
+
+char	*ft_strdup(char *src)
 {
-	if (type >= 0 && type <= 127)
+	char	*duplicate;
+	int		i;
+
+	i = 0;
+	duplicate = malloc(sizeof(*src));
+	if (duplicate == NULL)
 	{
-		return (1);
+		return (NULL);
 	}
-	return (0);
+	while (src[i] != '\0')
+	{
+		duplicate[i] = src[i];
+		i++;
+	}
+	duplicate[i] = '\0';
+	return (duplicate);
 }
+/*
+#include <string.h>
+#include <stdio.h>
+int	main(void)
+{
+}*/

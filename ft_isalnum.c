@@ -3,18 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jessica <jessica@student.42.fr>            +#+  +:+       +#+        */
+/*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:47:55 by jslusark          #+#    #+#             */
-/*   Updated: 2024/04/22 16:04:52 by jessica          ###   ########.fr       */
+/*   Updated: 2024/04/23 12:18:40 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalnum(int type)
+int	ft_isalnum(int type)
 {
-    if ((type >= 'a' && type <= 'z') || (type >= 'A' && type <= 'Z') || (type >= '0' && type <= '9'))
-    {
-        return (1);
-    }
-    return (0);
+	if ((type >= 'a' && type <= 'z') || (type >= 'A' && type <= 'Z')
+	|| (type >= '0' && type <= '9'))
+	{
+		return (1);
+	}
+	return (0);
 }
