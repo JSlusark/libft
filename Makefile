@@ -1,5 +1,5 @@
 NAME = libft.a #the expected library name file#
-CC = gcc #do i still need to put this even if not using gcc? #
+CC = gcc
 CFLAGS = -Wall -Wextra -Werror #flags are enough here?#
 OFILES = $(CFILES:.c=.o) #converts from c to o file#
 
@@ -48,7 +48,7 @@ $(NAME) : $(OFILES) #if make file doesn't exist, it creates the file #
 #removes all the ofiles after compiling#
 clean:
 	rm -f $(OFILES)
-	@echo "--> Cleaned object files"
+	@echo "--> Removed object files"
 
 #removes the library file after the make clean command
 fclean: clean
