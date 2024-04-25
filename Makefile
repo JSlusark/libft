@@ -1,5 +1,5 @@
 NAME = libft.a #the expected library name file#
-CC = cc #do i still need to put this even if not using gcc? #
+CC = gcc #do i still need to put this even if not using gcc? #
 CFLAGS = -Wall -Wextra -Werror #flags are enough here?#
 OFILES = $(CFILES:.c=.o) #converts from c to o file#
 
@@ -29,31 +29,35 @@ ft_calloc.c \
 ft_strdup.c
 
 all : $(NAME) # all is the target that creates the libft.a from the compilated files, clean will create the .o files once the makefile is compiled #
-	@echo "-->Created file"
+	@echo "--> Created file"
 
 $(NAME) : $(OFILES) #if make file doesn't exist, it creates the file #
 	ar rcs $(NAME) $(OFILES)
-	@echo "-->Library compiled"
+	@echo "--> Library created"
+	ranlib $(NAME)
+	@echo "--> Library Indexed"
 
 #ar means archive
 #r insert or replace OFILES to NAME
 #c create the archive if it doesn't exist
 #s write an index to the archive or update it if it exists #
 
+%.o: %.c
+		$(CC) $(FLAG) -c $< -o $@
+
 #removes all the ofiles after compiling#
 clean:
 	rm -f $(OFILES)
-	@echo "-->Cleaned object files"
+	@echo "--> Cleaned object files"
 
 #removes the library file after the make clean command
 fclean: clean
 	rm -f $(NAME)
-	@echo "-->Cleaned library file"
+	@echo "--> Removed $(NAME) file"
 
 #rebuilds the file name?
 re: fclean $(NAME)
-	@echo "-->Recompiled everything"
-
+	@echo "--> Recompiled everything"
 
 #are all the actions that makefile can do
 .PHONY: all clean fclean re
