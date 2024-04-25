@@ -1,3 +1,16 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: jessica <jessica@student.42.fr>            +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/04/25 11:53:09 by jessica           #+#    #+#              #
+#    Updated: 2024/04/25 11:53:34 by jessica          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+
 NAME = libft.a #the expected library name file#
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror #flags are enough here?#
