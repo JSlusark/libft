@@ -6,11 +6,13 @@
 /*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:48:10 by jslusark          #+#    #+#             */
-/*   Updated: 2024/04/23 12:16:34 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/04/25 14:55:59 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int type)
+#include "libft.h"
+
+int	ft_isascii(int type)
 {
 	if (type >= 0 && type <= 127)
 	{

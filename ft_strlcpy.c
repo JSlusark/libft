@@ -6,9 +6,11 @@
 /*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:49:24 by jslusark          #+#    #+#             */
-/*   Updated: 2024/04/23 12:38:06 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/04/25 14:43:14 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dst_size)
 {

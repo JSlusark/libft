@@ -6,9 +6,11 @@
 /*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:49:15 by jslusark          #+#    #+#             */
-/*   Updated: 2024/04/23 16:39:30 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/04/25 14:42:49 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_memset(void *s, int c, size_t n)
 {

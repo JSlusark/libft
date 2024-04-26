@@ -6,9 +6,11 @@
 /*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:25:48 by jslusark          #+#    #+#             */
-/*   Updated: 2024/04/23 12:28:04 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/04/25 14:42:45 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isalpha(int type)
 {

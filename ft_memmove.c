@@ -6,9 +6,11 @@
 /*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:49:11 by jslusark          #+#    #+#             */
-/*   Updated: 2024/04/23 16:03:56 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/04/25 14:42:48 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*memmove(void *dest, const void *src, size_t n)
 {

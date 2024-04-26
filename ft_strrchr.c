@@ -6,10 +6,13 @@
 /*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:49:50 by jslusark          #+#    #+#             */
-/*   Updated: 2024/04/23 12:29:29 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/04/25 18:29:45 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+// don't remember this one
 char	*ft_strrchr(const char *s, int c)
 {
 	int			i;

@@ -6,13 +6,15 @@
 /*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:49:20 by jslusark          #+#    #+#             */
-/*   Updated: 2024/04/23 12:32:51 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/04/25 14:43:11 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 size_t	ft_strlcat(char *dst, const char *src, size_t dst_size)
 {
-	size_t	i
+	size_t	i;
 	size_t	j;
 
 	i = 0;

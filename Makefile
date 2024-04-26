@@ -3,13 +3,12 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jessica <jessica@student.42.fr>            +#+  +:+       +#+         #
+#    By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/25 11:53:09 by jessica           #+#    #+#              #
-#    Updated: 2024/04/25 11:53:34 by jessica          ###   ########.fr        #
+#    Updated: 2024/04/26 12:37:49 by jslusark         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-
 
 NAME = libft.a #the expected library name file#
 CC = gcc
@@ -41,12 +40,12 @@ ft_atoi.c \
 ft_calloc.c \
 ft_strdup.c
 
-all : $(NAME) # all is the target that creates the libft.a from the compilated files, clean will create the .o files once the makefile is compiled #
+all : $(NAME) # all is the target that creates the libft.a from the compilated files, clean will create the .o files once the library is created #
 	@echo "--> Created file"
 
-$(NAME) : $(OFILES) #if make file doesn't exist, it creates the file #
+$(NAME) : $(OFILES) #if make file doesn't exist, it creates the file  NOT MAKES SENSE#
 	ar rcs $(NAME) $(OFILES)
-	@echo "--> Library created"
+	@echo "--> Library archived and indexed"
 	ranlib $(NAME)
 	@echo "--> Library Indexed"
 
@@ -56,7 +55,7 @@ $(NAME) : $(OFILES) #if make file doesn't exist, it creates the file #
 #s write an index to the archive or update it if it exists #
 
 %.o: %.c
-		$(CC) $(FLAG) -c $< -o $@
+		$(CC) $(CFLAGS) -c $< -o $@
 
 #removes all the ofiles after compiling#
 clean:

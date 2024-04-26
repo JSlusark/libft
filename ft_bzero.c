@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jessica <jessica@student.42.fr>            +#+  +:+       +#+        */
+/*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:47:52 by jslusark          #+#    #+#             */
-/*   Updated: 2024/04/25 12:07:56 by jessica          ###   ########.fr       */
+/*   Updated: 2024/04/25 14:42:41 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void ft_bzero(void *s, size_t n)
 {

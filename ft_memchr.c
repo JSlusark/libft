@@ -6,9 +6,11 @@
 /*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:48:19 by jslusark          #+#    #+#             */
-/*   Updated: 2024/04/24 11:06:38 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/04/25 14:42:47 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*memchr(const void *s, int c, size_t n)
 {

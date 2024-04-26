@@ -6,10 +6,11 @@
 /*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:48:37 by jslusark          #+#    #+#             */
-/*   Updated: 2024/04/24 10:42:03 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/04/25 14:40:39 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 //its like strcmp
 /*  The memcmp() function compares the first n bytes
        (each interpreted as unsigned char) of the  mem‐

@@ -6,9 +6,11 @@
 /*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:47:55 by jslusark          #+#    #+#             */
-/*   Updated: 2024/04/23 12:18:40 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/04/25 14:42:44 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isalnum(int type)
 {

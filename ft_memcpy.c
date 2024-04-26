@@ -6,9 +6,11 @@
 /*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:48:40 by jslusark          #+#    #+#             */
-/*   Updated: 2024/04/24 11:07:24 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/04/25 14:42:48 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*memcpy(void *dest, const void *src, size_t n)
 {

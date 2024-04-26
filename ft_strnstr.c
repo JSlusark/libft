@@ -6,9 +6,11 @@
 /*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:49:32 by jslusark          #+#    #+#             */
-/*   Updated: 2024/04/23 12:45:47 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/04/25 14:43:26 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {

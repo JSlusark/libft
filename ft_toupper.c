@@ -6,9 +6,11 @@
 /*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:52:36 by jslusark          #+#    #+#             */
-/*   Updated: 2024/04/23 12:24:58 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/04/25 14:43:41 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_tolower(int type)
 {
