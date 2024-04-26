@@ -6,7 +6,7 @@
 /*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:48:40 by jslusark          #+#    #+#             */
-/*   Updated: 2024/04/25 14:42:48 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/04/26 14:37:06 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,18 +16,18 @@ void	*memcpy(void *dest, const void *src, size_t n)
 {
 	size_t			i;
 	unsigned char	*d;
-	unsigned char	*s;
+	const unsigned char	*s;
 
 	i = 0;
 	d = (unsigned char *) dest;
-	s = (unsigned const char *) src;
+	s = (const unsigned char *) src;
 
 	// there typically isn't a check for null pointers because the behavior of memcpy when given null pointers is undefined by the C standard.
 	//This means that it is the responsibility of the caller to ensure that valid pointers are passed to the function.
-	if (!dest || !src)
-	{
-		return (0);
-	}
+	// if (!dest || !src)
+	// {
+	// 	return (0);
+	// }
 	while (i < n)
 	{
 		d[i] = s[i];

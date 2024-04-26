@@ -6,7 +6,7 @@
 /*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 11:53:39 by jessica           #+#    #+#             */
-/*   Updated: 2024/04/25 18:18:03 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/04/26 17:43:35 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ char				*ft_strchr(const char *s, int c);
 char				*ft_strdup(char *src);
 size_t				ft_strlcat(char *dst, const char *src, size_t dst_size);
 size_t				ft_strlcpy(char *dst, const char *src, size_t dst_size);
-size_t				ft_strlen(char *str);
+size_t				ft_strlen(const char *str);
 int					ft_strcmp(char *str1, char *str2, size_t n);
 char				*ft_strnstr(const char *big, const char *little, size_t len);
 char				*ft_strrchr(const char *s, int c);

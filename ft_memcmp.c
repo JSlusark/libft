@@ -6,7 +6,7 @@
 /*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:48:37 by jslusark          #+#    #+#             */
-/*   Updated: 2024/04/25 14:40:39 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/04/26 15:02:52 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,11 @@ int	memcmp(const void *s1, const void *s2, size_t n)
 	str1 = (unsigned char *)s1;
 	str2 = (unsigned char *)s2;
 	i = 0;
-	if (n = 0)
+	if (n == 0)
 		return (0);
 	while (i < n)
 	{
-		if( *str1 =! *str2)
+		if(*str1 != *str2)
 			return (*str1 - *str2);
 		str1++;
 		str2++;
