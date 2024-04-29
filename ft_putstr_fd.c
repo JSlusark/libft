@@ -3,10 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jjs <jjs@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 11:47:10 by jslusark          #+#    #+#             */
-/*   Updated: 2024/04/29 11:47:10 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/04/29 22:06:39 by jjs              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+void		ft_putstr_fd(char const *s, int fd)
+{
+	write(fd, s, ft_strlen(s));
+}
