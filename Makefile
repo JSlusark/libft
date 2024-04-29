@@ -6,7 +6,7 @@
 #    By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/25 11:53:09 by jessica           #+#    #+#              #
-#    Updated: 2024/04/26 17:59:33 by jslusark         ###   ########.fr        #
+#    Updated: 2024/04/29 16:29:25 by jslusark         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,7 +39,10 @@ ft_memcmp.c \
 ft_strnstr.c \
 ft_atoi.c \
 ft_calloc.c \
-ft_strdup.c
+ft_strdup.c \
+ft_substr.c \
+ft_strjoin.c \
+ft_strtrim.c
 
 all : $(NAME)
 	@echo "--> Created file"
