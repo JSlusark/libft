@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jjs <jjs@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:48:37 by jslusark          #+#    #+#             */
-/*   Updated: 2024/04/26 15:02:52 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/04/29 21:22:02 by jjs              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
        (each interpreted as unsigned char) of the  mem‐
        ory areas s1 and s2.
  */
-int	memcmp(const void *s1, const void *s2, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	// we store the s1 and s2 in variables because they are const and can't be modified
 	unsigned char	*str1;
