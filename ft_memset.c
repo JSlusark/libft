@@ -6,7 +6,7 @@
 /*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:49:15 by jslusark          #+#    #+#             */
-/*   Updated: 2024/04/25 14:42:49 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/04/30 18:05:54 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,3 +24,10 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
+/* #include <stdio.h>
+int main(void)
+{
+	char	string[10] = "aaaaaaaaaa";
+	printf("%s", (char*)ft_memset(string, 69, 7));
+	// printf("%s", (char*)memset(string, 69, 7));
+} */

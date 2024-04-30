@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jjs <jjs@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 11:53:39 by jessica           #+#    #+#             */
-/*   Updated: 2024/04/29 22:14:31 by jjs              ###   ########.fr       */
+/*   Updated: 2024/04/30 10:22:58 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,14 +46,14 @@ int		ft_strcmp(char *str1, char *str2, size_t n);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_strrchr(const char *s, int c);
 int		ft_tolower(int type);
-int		ft_tolower(int type);
+int		ft_toupper(int type);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
-void		ft_putstr_fd(char const *s, int fd);
-void		ft_putnbr_fd(int n, int fd);
-void		ft_putendl_fd(char const *s, int fd);
-void		ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char const *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
+void	ft_putendl_fd(char const *s, int fd);
+void	ft_putchar_fd(char c, int fd);
 #endif
 /*
 //need to write all the other functions
