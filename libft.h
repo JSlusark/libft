@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jjs <jjs@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 11:53:39 by jessica           #+#    #+#             */
-/*   Updated: 2024/04/30 10:22:58 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/05/01 23:28:31 by jjs              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ char	*ft_strdup(char *src);
 size_t	ft_strlcat(char *dst, const char *src, size_t dst_size);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dst_size);
 size_t	ft_strlen(const char *str);
-int		ft_strcmp(char *str1, char *str2, size_t n);
+int		ft_strncmp(char *str1, char *str2, size_t n);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_strrchr(const char *s, int c);
 int		ft_tolower(int type);
@@ -54,6 +54,7 @@ void	ft_putstr_fd(char const *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putendl_fd(char const *s, int fd);
 void	ft_putchar_fd(char c, int fd);
+char	*ft_itoa(int n);
 #endif
 /*
 //need to write all the other functions

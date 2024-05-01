@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jjs <jjs@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:49:29 by jslusark          #+#    #+#             */
-/*   Updated: 2024/04/25 14:43:18 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/05/01 23:28:48 by jjs              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strcmp(char *str1, char *str2, size_t n)
+int	ft_strncmp(char *str1, char *str2, size_t n)
 {
 	size_t	i;
 

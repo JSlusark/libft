@@ -6,7 +6,7 @@
 /*   By: jjs <jjs@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:48:19 by jslusark          #+#    #+#             */
-/*   Updated: 2024/04/29 21:21:58 by jjs              ###   ########.fr       */
+/*   Updated: 2024/05/01 21:23:52 by jjs              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
+	size_t				i;
 	const unsigned char	*stored_s;
-	size_t			i;
 
 	i = 0;
 	stored_s = (const unsigned char *)s;

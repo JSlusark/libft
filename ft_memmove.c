@@ -6,7 +6,7 @@
 /*   By: jjs <jjs@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:49:11 by jslusark          #+#    #+#             */
-/*   Updated: 2024/05/01 19:46:00 by jjs              ###   ########.fr       */
+/*   Updated: 2024/05/01 22:35:03 by jjs              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,25 +22,46 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	size_t	i;
 
-	i = n;
-
-	if (dest < src)
-		return (ft_memcpy(dest, src, n));
-
-	if (dest > src)
+	i = 0;
+	if (!dest && !src)
+		return (0);
+	if ((size_t)dest - (size_t)src < n)
 	{
-	// need to check below what it does cause confused from the copy result
-	//starts copying from the last index (n-1) to the first index (0),
-	//ensuring that no source data is corrupted during the copy process
-		while (i--)
+		i = n - 1;
+		while (i >= 0 && i < n)
 		{
 			((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
+			i--;
+		}
+	}
+	else
+	{
+		while (i < n)
+		{
+			((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
+			i++;
 		}
 	}
 	return (dest);
 }
 /* #include <stdio.h>
-int	main(void)
+int main(void)
 {
-	*ft_memmove();
+	char	string1[10] = "aaaaaaaaaa";
+	char	string2[10] = "bbbbbbbbbb";
+	printf("%s\n", (char*)ft_memmove(string1, string2, 5));
+	printf("%s\n", (char*)memmove(string1, string2, 5));
+
+char buffer[30] = "HelloWorld";
+
+	// printf("%s\n", (char*)memcpy(buffer + 5, buffer, 10)); //helloworlo
+	// printf("%s\n", (char*)memmove(buffer + 5, buffer, 10)); //helloworld
+	// printf("%s\n", (char*)ft_memcpy(buffer + 5, buffer, 10)); //hellohello
+	// printf("%s\n", (char*)ft_memmove(buffer + 5, buffer, 10)); //helloworld
+
 } */
+/*
+if dest< src it avoids overwriting the source before it is read by using memcpy
+is dest>src we have to copy bytes from the end so that we can avoid overlaps
+and corrupting the copied data
+ */

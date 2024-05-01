@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jjs <jjs@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:49:32 by jslusark          #+#    #+#             */
-/*   Updated: 2024/04/25 14:43:26 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/05/01 21:20:56 by jjs              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 			if (big[h] == '\0' && little[n] == '\0')
 				return ((char *)&big[h]);
 			n++;
-            h++;
+			h++;
 		}
 		if (little[n] == '\0')
 			return ((char *)big + h);

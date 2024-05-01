@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+         #
+#    By: jjs <jjs@student.42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/25 11:53:09 by jessica           #+#    #+#              #
-#    Updated: 2024/04/30 10:22:30 by jslusark         ###   ########.fr        #
+#    Updated: 2024/05/01 23:28:36 by jjs              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,7 +46,8 @@ ft_strtrim.c \
 ft_putchar_fd.c \
 ft_putendl_fd.c \
 ft_putnbr_fd.c \
-ft_putstr_fd.c
+ft_putstr_fd.c \
+ft_itoa.c
 
 all : $(NAME)
 	@echo "--> Created file"

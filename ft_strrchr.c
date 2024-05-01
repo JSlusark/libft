@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jjs <jjs@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:49:50 by jslusark          #+#    #+#             */
-/*   Updated: 2024/04/26 14:29:48 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/05/01 23:28:05 by jjs              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,22 @@
 // don't remember this one
 char	*ft_strrchr(const char *s, int c)
 {
-	int			i;
-	const char	*ini;
+	const char	*last_occurrence;
+	// Pointer to store the last occurrence
+	// Ensure c is converted properly if higher than 255
+	c = (unsigned char)c;
 
-	ini = s;
-	i = ft_strlen(s);
-	s = (s + i);
-	while (*s != *ini && c != *s)
-		s--;
-	if (c == *s)
+    // Loop condition changed to keep checking until we find 'c' or end the string
+	while (*s != c)
+	{
+		if (*s == c)
+			last_occurrence = s; // Update last_occurrence when we find c
+		s++;
+	}
+ // Handle the case where c is the null terminator '\0'
+	if (c == '\0')
 		return ((char *)s);
-	return (0);
-} // need to recheck
+
+	return ((char *)last_occurrence);
+	// Return the pointer to the last occurrence of 'c'
+}

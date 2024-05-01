@@ -3,45 +3,40 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jjs <jjs@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 13:11:26 by jslusark          #+#    #+#             */
-/*   Updated: 2024/04/30 10:15:43 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/05/01 22:27:28 by jjs              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//save for later
 #include "libft.h"
-size_t	count_nbrs(int n)
-{
-	unsigned int	count;
-	count = 1;
-	while(n /=10)
-		count++;
 
-	return(count);
-}
-
-#include <stdio.h>
 char	*ft_itoa(int n)
 {
-	char	digit;
-	size_t	len;
-	size_t	i;
-	len = count_nbrs(n);
-	i = 0;
-	// if (n > 10 )
-	// {
+	char	*str;
+	long	nbr;
+	size_t	size;
 
-	// }
-	while( i <= len )
+	nbr = n;
+	size = n > 0 ? 0 : 1;
+	nbr = nbr > 0 ? nbr : -nbr;
+	while (n)
 	{
-		digit[i] = (n % 10) + '\0';
+		n /= 10;
+		size++;
 	}
-	printf("%zu \n", len);
-	return (digit); // wrong
-}
-int	main(void)
-{
-	printf("%s", ft_itoa(100));
+	if (!(str = (char *)malloc(size + 1)))
+		return (0);
+	*(str + size--) = '\0';
+	while (nbr > 0)
+	{
+		*(str + size--) = nbr % 10 + '0';
+		nbr /= 10;
+	}
+	if (size == 0 && str[1] == '\0')
+		*(str + size) = '0';
+	else if (size == 0 && str[1] != '\0')
+		*(str + size) = '-';
+	return (str);
 }

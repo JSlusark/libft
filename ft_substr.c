@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jjs <jjs@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 11:18:26 by jslusark          #+#    #+#             */
-/*   Updated: 2024/04/29 14:27:23 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/05/01 21:23:22 by jjs              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,11 @@ char	*ft_substr(char const *s, unsigned int start,size_t len)
 
 	if (!s)
 		return (NULL);
-	s_len = strlen(s); //remove and use my strlen
-	sub = (char*)malloc(sizeof(s) * len + 1); // why should it be like this???
+	s_len = ft_strlen(s);
+	sub = (char*)malloc(sizeof(s) * len + 1);
 	i = 0;
 	if (s_len <= len)
-		return (strdup("")); //check if correct, strdup fails franci
+		return (strdup(""));
 	while (i <= len)
 	{
 		sub[i] = s[start];
