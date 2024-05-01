@@ -6,7 +6,7 @@
 /*   By: jjs <jjs@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:48:40 by jslusark          #+#    #+#             */
-/*   Updated: 2024/04/29 21:22:06 by jjs              ###   ########.fr       */
+/*   Updated: 2024/05/01 19:45:27 by jjs              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,31 +22,39 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	d = (unsigned char *) dest;
 	s = (const unsigned char *) src;
 
-	// there typically isn't a check for null pointers because the behavior of memcpy when given null pointers is undefined by the C standard.
-	//This means that it is the responsibility of the caller to ensure that valid pointers are passed to the function.
-	// if (!dest || !src)
-	// {
-	// 	return (0);
-	// }
+	if (!dest && !src)
+	{
+		return (dest);
+	}
 	while (i < n)
 	{
 		d[i] = s[i];
 		i++;
-		//can i actually use strcpy() here?
 	}
 
 	return (dest);
 }
+/* #include <stdio.h>
+int main(void)
+{
+	char	string1[10] = "aaaaaaaaaa";
+	char	string2[10] = "bbbbbbbbbb";
+	printf("%s\n", (char*)ft_memcpy(string1, string2, 5));
+	printf("%s\n", (char*)memcpy(string1, string2, 5));
 
+	char dest[30] = "DataCycle";
+	char src[30] = "CyclicSourceData";
+	printf("%s\n", (char*)ft_memcpy(dest, src, 15));
+	printf("%s\n", (char*)ft_memcpy(src, dest, 15));
+	// printf("%s\n", (char*)memcpy(dest, src, 15));
+	// printf("%s\n", (char*)memcpy(src, dest, 15));
+} */
 /*
-why we use char and not int?
-char is guaranteed to be 1 byte in size.
-This makes it the ideal choice for byte-level operations where you
-need to handle data one byte at a time.
-essential for accurately copying arbitrary data (like binary data, structs, arrays, etc.)
-from one memory location to another without error or misalignment
-char * does not interpret the data; it simply moves data from one location to another
-Using char * ensures that the memcpy function copies exactly one byte at a time, which is essential for
-accurately copying arbitrary data (like binary data, structs, arrays, etc.
-unsigned, making it suitable for binary data handling where sign bits might cause issues
+we have to copy each 1byte from src to dst
+does not treat overlaps, which is
+memmove's job
+was thinking to use strlcpy but memcpy
+does not add null terminators as
+we are handling data here
+OVERLAPPING IS NOT OVERFLOW - https://cs50.stackexchange.com/questions/14615/memory-overlap-in-c
 */
