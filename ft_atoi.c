@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jjs <jjs@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:47:49 by jslusark          #+#    #+#             */
-/*   Updated: 2024/04/30 17:17:52 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/05/01 16:49:36 by jjs              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,25 @@
 
 int	ft_atoi(const char *str)
 {
-	int	num;
-	int	sign;
-	int	sign_appearance;
+	int		num;
+	int		sign;
+	size_t	i;
 
 	num = 0;
 	sign = 1;
-	sign_appearance = 0;
-	while ((*str >= 9 && *str <= 13) || *str == ' ')
-		str++;
-	while (*str == '-' || *str == '+' )
+	i = 0;
+	while ((str[i] >= 9 && str[i] <= 13) || str[i] == ' ')
+		i++;
+	if (str[i] == '-' || str[i] == '+' )
 	{
-		if (*str == '-')
+		if (str[i] == '-')
 			sign = -1;
-		str++;
-		sign_appearance++;
+		i++;
 	}
-	if (sign_appearance > 1)
-		return (0);
-	while (ft_isdigit(*str))
+	while (ft_isdigit(str[i]))
 	{
-		num = (num * 10) + (*str - '0');
-		str++;
+		num = (num * 10) + (str[i] - '0');
+		i++;
 	}
 	return (num * sign);
 }
@@ -53,4 +50,10 @@ int	main(void)
 	printf("%d\n", atoi(" -9")); //
 	printf("%d\n", ft_atoi("-- 789")); //
 	printf("%d\n", atoi("-- 789")); //
+
+	// notes : i used size_t for i because it's usually used for indexing and loops,
+	// it's an unsigned type also, represents the size of any object which might
+	// be good when handling long indexes
+	// ontinuing to use size_t can help maintain consistency if using it through the rest of the lib
+
 } //ok */
