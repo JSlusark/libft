@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jjs <jjs@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:49:20 by jslusark          #+#    #+#             */
-/*   Updated: 2024/05/01 21:20:41 by jjs              ###   ########.fr       */
+/*   Updated: 2024/05/02 18:30:41 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dst_size)
 
 	d_i = 0;
 	s_i = 0;
-
 	while (dst[d_i] && d_i < dst_size)
 		d_i++;
 	while ((src[s_i] != '\0') && ((d_i + s_i + 1) < dst_size))

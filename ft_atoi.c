@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jjs <jjs@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:47:49 by jslusark          #+#    #+#             */
-/*   Updated: 2024/05/01 18:48:42 by jjs              ###   ########.fr       */
+/*   Updated: 2024/05/02 18:20:49 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,24 +36,10 @@ int	ft_atoi(const char *str)
 	}
 	return (num * sign);
 }
-/* #include <stdio.h>
-#include <stdlib.h>
-int	main(void)
-{
-	printf("%d\n", ft_atoi("   500")); //0
-	printf("%d\n", atoi("   500")); //0
-	printf("%d\n", ft_atoi("+-2093 abdd")); //0
-	printf("%d\n", atoi("+-2093 abdd")); //0
-	printf("%d\n", ft_atoi("abc600")); //
-	printf("%d\n", atoi("abc600")); //
-	printf("%d\n", ft_atoi(" -9")); //
-	printf("%d\n", atoi(" -9")); //
-	printf("%d\n", ft_atoi("-- 789")); //
-	printf("%d\n", atoi("-- 789")); //
-
-	// notes : i used size_t for i because it's usually used for indexing and loops,
-	// it's an unsigned type also, represents the size of any object which might
-	// be good when handling long indexes
-	// ontinuing to use size_t can help maintain consistency if using it through the rest of the lib
-
-} //ok */
+/* 	notes : i used size_t for i
+because it's usually used for indexing and loops,
+it's an unsigned type also, represents the size
+of any object which might
+be good when handling long indexes
+continuing to use size_t can help maintain consistency
+if using it through the rest of the lib */

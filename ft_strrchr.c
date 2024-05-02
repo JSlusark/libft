@@ -3,34 +3,33 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jjs <jjs@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:49:50 by jslusark          #+#    #+#             */
-/*   Updated: 2024/05/01 23:28:05 by jjs              ###   ########.fr       */
+/*   Updated: 2024/05/02 18:30:19 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// don't remember this one
 char	*ft_strrchr(const char *s, int c)
 {
-	const char	*last_occurrence;
-	// Pointer to store the last occurrence
-	// Ensure c is converted properly if higher than 255
-	c = (unsigned char)c;
+	char		*alt;
+	size_t		i;
 
-    // Loop condition changed to keep checking until we find 'c' or end the string
-	while (*s != c)
-	{
-		if (*s == c)
-			last_occurrence = s; // Update last_occurrence when we find c
-		s++;
-	}
- // Handle the case where c is the null terminator '\0'
+	i = ft_strlen(s);
+	alt = (char *)s;
 	if (c == '\0')
-		return ((char *)s);
-
-	return ((char *)last_occurrence);
-	// Return the pointer to the last occurrence of 'c'
+		return (&alt[i]);
+	while (i != 0)
+	{
+		if (alt[i] == (char)c)
+		{
+			return (&alt[i]);
+		}
+		i--;
+	}
+	if (s[i] == (char)c)
+		return (alt);
+	return (0);
 }

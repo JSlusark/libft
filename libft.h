@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jjs <jjs@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 11:53:39 by jessica           #+#    #+#             */
-/*   Updated: 2024/05/01 23:28:31 by jjs              ###   ########.fr       */
+/*   Updated: 2024/05/02 19:03:43 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ void	ft_putnbr_fd(int n, int fd);
 void	ft_putendl_fd(char const *s, int fd);
 void	ft_putchar_fd(char c, int fd);
 char	*ft_itoa(int n);
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 #endif
 /*
 //need to write all the other functions

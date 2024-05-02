@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jjs <jjs@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:47:52 by jslusark          #+#    #+#             */
-/*   Updated: 2024/05/01 18:34:30 by jjs              ###   ########.fr       */
+/*   Updated: 2024/05/02 18:53:49 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	memset(s, 0, n);
+	ft_memset(s, 0, n);
 }
 /* #include <stdio.h>
 #include <strings.h>

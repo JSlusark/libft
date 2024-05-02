@@ -6,7 +6,10 @@
 /*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 11:44:37 by jslusark          #+#    #+#             */
-/*   Updated: 2024/04/29 11:44:37 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/05/02 18:59:44 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));

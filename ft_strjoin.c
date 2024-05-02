@@ -6,7 +6,7 @@
 /*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 11:43:46 by jslusark          #+#    #+#             */
-/*   Updated: 2024/04/29 15:07:03 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/05/02 18:41:48 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	i = 0;
 	j = 0;
-	total_size = strlen(s1) + strlen(s2);
+	total_size = ft_strlen(s1) + ft_strlen(s2);
 	together = (char *)malloc(sizeof(char) * total_size + 1);
-	if(!together)
+	if (!together)
 		return (NULL);
 	while (s1[i] != '\0')
 	{
