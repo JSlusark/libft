@@ -6,7 +6,7 @@
 /*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 11:53:39 by jessica           #+#    #+#             */
-/*   Updated: 2024/05/02 19:03:43 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/05/03 14:46:17 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,8 @@ void	ft_putendl_fd(char const *s, int fd);
 void	ft_putchar_fd(char c, int fd);
 char	*ft_itoa(int n);
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char	**ft_split(char const *s, char c);
 #endif
 /*
 //need to write all the other functions

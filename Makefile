@@ -6,7 +6,7 @@
 #    By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/25 11:53:09 by jessica           #+#    #+#              #
-#    Updated: 2024/05/02 19:05:23 by jslusark         ###   ########.fr        #
+#    Updated: 2024/05/03 14:45:44 by jslusark         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,7 +48,11 @@ ft_putendl_fd.c \
 ft_putnbr_fd.c \
 ft_putstr_fd.c \
 ft_itoa.c \
-ft_striteri.c
+ft_striteri.c \
+ft_strmapi.c \
+ft_split.c
+
+
 
 all : $(NAME)
 	@echo "--> Created file"
