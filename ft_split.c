@@ -6,13 +6,11 @@
 /*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 11:44:06 by jslusark          #+#    #+#             */
-/*   Updated: 2024/05/03 18:43:17 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/05/06 13:21:35 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
-#include <stdio.h>
 
 size_t	count_words(const char *s, char c)
 {
@@ -26,64 +24,59 @@ size_t	count_words(const char *s, char c)
 		if (*s != c && is_word == 0)
 		{
 			is_word = 1;
-			count++; // we are in a word therefore we count it
+			count++;
 		}
 		if (*s == c)
-			is_word = 0; // we are no longer in a word
+			is_word = 0;
 		s++;
 	}
 	return (count);
 }
 
+static char	*alloc_word(const char *start, int len)
+{
+	char	*word;
+
+	word = malloc(len + 1);
+	if (!word)
+		return (NULL);
+	ft_strlcpy(word, start, len + 1);
+	return (word);
+}
+
+void	*ft_freeresult(char **result, size_t w_i)
+{
+	while (w_i > 0)
+		free (result[--w_i]);
+	free (result);
+	return (NULL);
+}
+
 char	**ft_split(char const *s, char c)
 {
-	size_t		words;
 	char		**result;
-	const char	*start;
+	const char	*w_start;
 	size_t		w_i;
-	size_t		w_len;
 
-	words = count_words(s, c);
-	result = malloc(sizeof(char *) * (words + 1));
+	result = malloc(sizeof(char *) * (count_words(s, c) + 1));
 	w_i = 0;
-	if (!result) // if allocation fails
+	if (!result)
 		return (NULL);
 	while (*s)
 	{
-		if (*s != c)
-		{
-			start = s;
-			while (*s && *s != c)
-				s++;
-			w_len = s - start; // s pointer and start pointer provide the len of the word
-			result[w_i] = malloc(sizeof(char) * (w_len + 1));
-			if (!result[w_i])
-			{
-				while (w_i > 0)
-					free(result[--w_i]);
-				free(result);
-				return (NULL);
-			}
-			ft_strlcpy(result[w_i], start, w_len + 1);
-			w_i++;
-		}
-		else
-		{
+		while (*s == c)
 			s++;
+		w_start = s;
+		while (*s && *s != c)
+			s++;
+		if (s > w_start)
+		{
+			result[w_i] = alloc_word(w_start, s - w_start);
+			if (!result[w_i])
+				return (ft_freeresult(result, w_i));
+			w_i++;
 		}
 	}
 	result[w_i] = '\0';
 	return (result);
 }
-
-// int main(void) {
-//     char **returned = ft_split("let, me, pass, this", ',');
-//     if (returned) {
-//         for (char **p = returned; *p; p++) {
-//             printf("%s\n", *p);
-//             free(*p); // Remember to free memory
-//         }
-//         free(returned);
-//     }
-//     return 0;
-// }

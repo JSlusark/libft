@@ -6,7 +6,7 @@
 /*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 11:18:26 by jslusark          #+#    #+#             */
-/*   Updated: 2024/05/02 18:42:28 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/05/06 13:16:27 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,29 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t s_len;
-	size_t i;
-	char *sub;
+	size_t	s_len;
+	size_t	i;
+	char	*sub;
+	size_t	max_len;
 
 	if (!s)
 		return (NULL);
 	s_len = ft_strlen(s);
-	if (start >= s_len) // Check if the start index is beyond the string length
+	if (start >= s_len)
 		return (ft_strdup(""));
-// Calculate the maximum length it can copy
-	size_t max_len = s_len - start;
+	max_len = s_len - start;
 	if (len > max_len)
-		len = max_len; // Reduce len if it exceeds the length of the substring from start
-	sub = (char*)malloc(sizeof(char) * (len + 1));
+		len = max_len;
+	sub = (char *)malloc(sizeof(char) * (len + 1));
 	if (!sub)
 		return (NULL);
 	i = 0;
-	while (i < len && s[start + i]) // Ensure not reading past the original string
+	while (i < len && s[start + i])
 	{
 		sub[i] = s[start + i];
 		i++;
 	}
-	sub[i] = '\0'; // Correctly terminate the string
+	sub[i] = '\0';
 	return (sub);
 }
 /* #include <stdio.h>
