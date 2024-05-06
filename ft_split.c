@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jjs <jjs@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 11:44:06 by jslusark          #+#    #+#             */
-/*   Updated: 2024/05/06 13:21:35 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/05/06 21:56:18 by jjs              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,6 @@ char	**ft_split(char const *s, char c)
 			w_i++;
 		}
 	}
-	result[w_i] = '\0';
+	result[w_i] = NULL; // mac was complainng with '\0'
 	return (result);
 }

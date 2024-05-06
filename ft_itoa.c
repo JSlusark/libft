@@ -6,42 +6,64 @@
 /*   By: jjs <jjs@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 13:11:26 by jslusark          #+#    #+#             */
-/*   Updated: 2024/05/06 20:05:14 by jjs              ###   ########.fr       */
+/*   Updated: 2024/05/06 21:55:39 by jjs              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_itoa(int n)
+static int	get_size(int n)
 {
-	char	*str;
-	long	nbr;
-	size_t	size;
+	int		size;
+	long	num;
 
-	nbr = n;
-	size = 0;
+	size = 1;
+	num = n;
 	if (n < 0)
-		nbr = -nbr;
-	if (n <= 0)
-		size = 1;
-	while (n)
 	{
-		n /= 10;
+		num = -num;
 		size++;
 	}
+	while (num >= 10)
+	{
+		num /= 10;
+		size++;
+	}
+	return (size);
+}
+
+char	*ft_itoa(int n)
+{
+	long	num;
+	int		size;
+	char	*str;
+
+	num = n;
+	if (n < 0)
+		num = -num;
+	size = get_size(n);
 	str = (char *)malloc(size + 1);
 	if (!str)
-		return (0);
+		return (NULL);
+	if (n < 0)
+		str[0] = '-';
+	else if (n == 0)
+		str[0] = '0';
 	str[size--] = '\0';
-	while (nbr > 0)
+	while (num > 0)
 	{
-		str[size] = nbr % 10 + '0';
-		nbr = nbr / 10;
-		size--;
+		str[size--] = num % 10 + '0';
+		num /= 10;
 	}
-	if (size == 0 && str[1] == '\0')
-		str[size] = '0';
-	if (size == 0 && str[1] != '\0')
-		str[size] = '-';
 	return (str);
+}
+#include <stdio.h>
+#include <limits.h>
+int	main(void)
+{
+	printf("%s\n", ft_itoa(1300));
+	printf("%s\n", ft_itoa(100));
+	printf("%s\n", ft_itoa(-300)); //1316
+	printf("%s\n", ft_itoa(INT_MIN)); //-2147483648
+	printf("%s\n", ft_itoa(INT_MAX)); //2147483647
 }
