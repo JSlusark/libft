@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jjs <jjs@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 13:11:26 by jslusark          #+#    #+#             */
-/*   Updated: 2024/05/06 16:50:36 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/05/06 20:05:14 by jjs              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,24 +19,29 @@ char	*ft_itoa(int n)
 	size_t	size;
 
 	nbr = n;
-	size = n > 0 ? 0 : 1;
-	nbr = nbr > 0 ? nbr : -nbr;
+	size = 0;
+	if (n < 0)
+		nbr = -nbr;
+	if (n <= 0)
+		size = 1;
 	while (n)
 	{
 		n /= 10;
 		size++;
 	}
-	if (!(str = (char *)malloc(size + 1)))
+	str = (char *)malloc(size + 1);
+	if (!str)
 		return (0);
-	*(str + size--) = '\0';
+	str[size--] = '\0';
 	while (nbr > 0)
 	{
-		*(str + size--) = nbr % 10 + '0';
-		nbr /= 10;
+		str[size] = nbr % 10 + '0';
+		nbr = nbr / 10;
+		size--;
 	}
 	if (size == 0 && str[1] == '\0')
-		*(str + size) = '0';
-	else if (size == 0 && str[1] != '\0')
-		*(str + size) = '-';
+		str[size] = '0';
+	if (size == 0 && str[1] != '\0')
+		str[size] = '-';
 	return (str);
 }
