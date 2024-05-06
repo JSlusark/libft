@@ -6,13 +6,13 @@
 /*   By: jjs <jjs@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 11:44:06 by jslusark          #+#    #+#             */
-/*   Updated: 2024/05/06 21:56:18 by jjs              ###   ########.fr       */
+/*   Updated: 2024/05/06 22:08:18 by jjs              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	count_words(const char *s, char c)
+static size_t	count_words(const char *s, char c)
 {
 	size_t	count;
 	int		is_word;
@@ -77,6 +77,6 @@ char	**ft_split(char const *s, char c)
 			w_i++;
 		}
 	}
-	result[w_i] = NULL; // mac was complainng with '\0'
+	result[w_i] = NULL;
 	return (result);
 }

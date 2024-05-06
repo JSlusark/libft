@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jjs <jjs@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 11:43:56 by jslusark          #+#    #+#             */
-/*   Updated: 2024/05/02 17:52:28 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/05/06 22:09:13 by jjs              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	chara_is_found(char c, const char *set)
+static int	chara_is_found(char c, const char *set)
 {
 	while (*set)
 	{
@@ -23,7 +23,7 @@ int	chara_is_found(char c, const char *set)
 	return (0);
 }
 
-unsigned int	find_start(char const *s1, char const *set)
+static unsigned int	find_start(char const *s1, char const *set)
 {
 	unsigned int	i;
 
@@ -33,7 +33,7 @@ unsigned int	find_start(char const *s1, char const *set)
 	return (i);
 }
 
-unsigned int	find_end(char const *s1, char const *set, unsigned int start)
+static unsigned int	find_end(char const *s1, char const *set, unsigned int start)
 {
 	unsigned int	i;
 
