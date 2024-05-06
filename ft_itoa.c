@@ -6,7 +6,7 @@
 /*   By: jjs <jjs@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 13:11:26 by jslusark          #+#    #+#             */
-/*   Updated: 2024/05/06 21:55:39 by jjs              ###   ########.fr       */
+/*   Updated: 2024/05/06 21:58:29 by jjs              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,13 +57,13 @@ char	*ft_itoa(int n)
 	}
 	return (str);
 }
-#include <stdio.h>
-#include <limits.h>
-int	main(void)
-{
-	printf("%s\n", ft_itoa(1300));
-	printf("%s\n", ft_itoa(100));
-	printf("%s\n", ft_itoa(-300)); //1316
-	printf("%s\n", ft_itoa(INT_MIN)); //-2147483648
-	printf("%s\n", ft_itoa(INT_MAX)); //2147483647
-}
+// #include <stdio.h>
+// #include <limits.h>
+// int	main(void)
+// {
+// 	printf("%s\n", ft_itoa(1300));
+// 	printf("%s\n", ft_itoa(100));
+// 	printf("%s\n", ft_itoa(-300)); //1316
+// 	printf("%s\n", ft_itoa(INT_MIN)); //-2147483648
+// 	printf("%s\n", ft_itoa(INT_MAX)); //2147483647
+// }

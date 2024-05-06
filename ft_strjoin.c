@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jjs <jjs@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 11:43:46 by jslusark          #+#    #+#             */
-/*   Updated: 2024/05/02 18:41:48 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/05/06 21:59:54 by jjs              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,18 +26,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (!together)
 		return (NULL);
 	while (s1[i] != '\0')
-	{
-		together[j] = s1[i];
-		i++;
-		j++;
-	}
+		together[j++] = s1[i++];
 	i = 0;
 	while (s2[i] != '\0')
-	{
-		together[j] = s2[i];
-		i++;
-		j++;
-	}
+		together[j++] = s2[i++];
 	together[j] = '\0';
 	return (together);
 }
