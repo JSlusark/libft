@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jjs <jjs@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 11:43:56 by jslusark          #+#    #+#             */
-/*   Updated: 2024/05/06 22:09:13 by jjs              ###   ########.fr       */
+/*   Updated: 2024/05/07 09:41:51 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,8 @@ static unsigned int	find_start(char const *s1, char const *set)
 	return (i);
 }
 
-static unsigned int	find_end(char const *s1, char const *set, unsigned int start)
+static unsigned int	find_end(char const *s1, char const *set,
+unsigned int start)
 {
 	unsigned int	i;
 
