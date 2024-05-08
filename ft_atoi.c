@@ -6,7 +6,7 @@
 /*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:47:49 by jslusark          #+#    #+#             */
-/*   Updated: 2024/05/07 11:31:43 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/05/08 12:36:42 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ int	ft_atoi(const char *nptr)
 /* #include <stdio.h>
 int	main(void)
 {
+	//tests
 	printf("%i <- mine\n", ft_atoi("123"));
 	printf("%i\n", atoi("123"));
 	printf("%i <- mine \n ", ft_atoi("-123abc"));
