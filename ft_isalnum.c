@@ -6,7 +6,7 @@
 /*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:47:55 by jslusark          #+#    #+#             */
-/*   Updated: 2024/05/07 10:22:06 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/05/08 11:00:14 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,4 @@ int	main(void)
 	printf("y %i\n", ft_isalnum('z'));
 	printf("y %i\n", ft_isalnum('x'));
 	printf("y %i\n", ft_isalnum('Y'));
-} //ok */
+}*/

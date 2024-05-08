@@ -6,7 +6,7 @@
 /*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:47:52 by jslusark          #+#    #+#             */
-/*   Updated: 2024/05/07 12:04:56 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/05/08 10:59:59 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,5 +55,3 @@ int main(void)
 
 	return 0;
 } */
-/* writes 0 to a byte of the string
-therefore why we use memset inside*/

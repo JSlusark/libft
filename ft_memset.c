@@ -6,7 +6,7 @@
 /*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:49:15 by jslusark          #+#    #+#             */
-/*   Updated: 2024/05/07 12:13:49 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/05/08 11:02:26 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,6 @@ void	*ft_memset(void *s, int c, size_t n)
 	return (new_s);
 }
 
-// fills the  first n bytes of the memory area
-// pointed to by s with byte c.
-// returns a pointer to the memory area s.
 /* #include <stdio.h>
 int main(void)
 {

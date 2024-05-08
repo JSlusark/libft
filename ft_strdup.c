@@ -6,7 +6,7 @@
 /*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 17:59:20 by jslusark          #+#    #+#             */
-/*   Updated: 2024/05/07 14:05:34 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/05/08 11:03:01 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,6 @@ char	*ft_strdup(const char *s)
 /* #include <stdio.h>
 int main(void)
 {
-// we have to copy each byte
-// from src to dst, does not handle
-// overlaps
 	char	string1[12] = "Hello world";
 	printf("%s\n", (char*)ft_strdup(string1));
 	// printf("%s\n", (char*)strdup(string1, string2, 5));
