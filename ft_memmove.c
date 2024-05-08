@@ -6,7 +6,7 @@
 /*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:49:11 by jslusark          #+#    #+#             */
-/*   Updated: 2024/05/02 11:02:35 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/05/07 13:15:58 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,49 +20,35 @@ copied from the temporary array to dest. */
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	size_t	i;
+	void	*dest_ptr;
 
-	i = 0;
+	dest_ptr = dest;
 	if (!dest && !src)
-		return (0);
-	if ((size_t)dest - (size_t)src < n)
+		return (dest);
+	if (dest == src)
+		return (dest);
+	if (dest > src)
 	{
-		i = n - 1;
-		while (i < n)
-		{
-			((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
-			i--;
-		}
+		while (n--)
+			((unsigned char *)dest)[n] = ((unsigned char *)src)[n];
 	}
 	else
 	{
-		while (i < n)
-		{
-			((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
-			i++;
-		}
+		while (n--)
+			*(unsigned char *)dest++ = *(unsigned char *)src++;
 	}
-	return (dest);
+	return (dest_ptr);
 }
 /* #include <stdio.h>
 int main(void)
 {
-	//IT PASSE BUT ON MAC IT GIVES ME THE SAME CRASH - TEST THE TEST!!!
 	char	string1[10] = "aaaaaaaaaa";
 	char	string2[10] = "bbbbbbbbbb";
 	printf("%s\n", (char*)ft_memmove(string1, string2, 5));
 	printf("%s\n", (char*)memmove(string1, string2, 5));
 
-char buffer[30] = "HelloWorld";
-
-	// printf("%s\n", (char*)memcpy(buffer + 5, buffer, 10)); //helloworlo
-	// printf("%s\n", (char*)memmove(buffer + 5, buffer, 10)); //helloworld
-	// printf("%s\n", (char*)ft_memcpy(buffer + 5, buffer, 10)); //hellohello
-	// printf("%s\n", (char*)ft_memmove(buffer + 5, buffer, 10)); //helloworld
-
+	char	string3[13] = "aaaaaaaaaaaaa";
+	char	string4[10] = "bbbbbbbbbb";
+	printf("%s\n", (char*)ft_memmove(string3, string4, 5));
+	printf("%s\n", (char*)memmove(string3, string4, 5));
 } */
-/*
-if dest< src it avoids overwriting the source before it is read by using memcpy
-is dest>src we have to copy bytes from the end so that we can avoid overlaps
-and corrupting the copied data
- */

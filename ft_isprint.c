@@ -6,15 +6,15 @@
 /*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:48:14 by jslusark          #+#    #+#             */
-/*   Updated: 2024/04/30 17:35:13 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/05/07 10:23:38 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(int type)
+int	ft_isprint(int c)
 {
-	if (type >= ' ' && type <= '~')
+	if (c >= ' ' && c <= '~')
 	{
 		return (1);
 	}

@@ -6,15 +6,15 @@
 /*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:47:55 by jslusark          #+#    #+#             */
-/*   Updated: 2024/04/30 17:33:53 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/05/07 10:22:06 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(int type)
+int	ft_isalnum(int c)
 {
-	if (ft_isalpha(type) || ft_isdigit(type))
+	if (ft_isalpha(c) || ft_isdigit(c))
 	{
 		return (1);
 	}

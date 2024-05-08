@@ -6,15 +6,15 @@
 /*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:25:48 by jslusark          #+#    #+#             */
-/*   Updated: 2024/04/30 17:07:02 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/05/07 10:22:29 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int type)
+int	ft_isalpha(int c)
 {
-	if ((type >= 'a' && type <= 'z') || (type >= 'A' && type <= 'Z'))
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 	{
 		return (1);
 	}

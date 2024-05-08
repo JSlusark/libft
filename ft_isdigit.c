@@ -6,15 +6,15 @@
 /*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:25:45 by jslusark          #+#    #+#             */
-/*   Updated: 2024/04/30 17:34:55 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/05/07 10:23:22 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(int type)
+int	ft_isdigit(int c)
 {
-	if (type >= '0' && type <= '9')
+	if (c >= '0' && c <= '9')
 	{
 		return (1);
 	}

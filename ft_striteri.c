@@ -6,14 +6,12 @@
 /*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 11:44:46 by jslusark          #+#    #+#             */
-/*   Updated: 2024/05/03 12:26:00 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/05/07 10:44:17 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* Applies a function to each character of a string,
-providing the index and a pointer to the character. */
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	unsigned int	i;

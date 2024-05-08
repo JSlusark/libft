@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jjs <jjs@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:48:37 by jslusark          #+#    #+#             */
-/*   Updated: 2024/05/02 09:28:52 by jjs              ###   ########.fr       */
+/*   Updated: 2024/05/07 13:15:38 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,11 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-/* int	main(void)
+/* #include <stdio.h>
+int	main(void)
 {
-	char	str1;
-	char	str2;
-
-	printf(memcmp());
+	const char *str1 = "hello there";
+	const char *str2 = "hello here";
+	printf("Standard memcmp: %d\n", memcmp(str1, str2, 7));
+	printf("Custom ft_memcmp: %d\n", ft_memcmp(str1, str2, 7));
 } */
