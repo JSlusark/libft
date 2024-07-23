@@ -6,7 +6,7 @@
 #    By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/25 11:53:09 by jessica           #+#    #+#              #
-#    Updated: 2024/05/03 14:45:44 by jslusark         ###   ########.fr        #
+#    Updated: 2024/07/23 12:13:25 by jslusark         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,6 +52,7 @@ ft_striteri.c \
 ft_strmapi.c \
 ft_split.c
 
+BONUSFILES = \
 
 
 all : $(NAME)
