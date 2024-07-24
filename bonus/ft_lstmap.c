@@ -6,7 +6,7 @@
 /*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 11:42:25 by jslusark          #+#    #+#             */
-/*   Updated: 2024/07/24 13:41:20 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/07/24 15:13:35 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	if (!lst || !f || !del)
 		return (0);
 	new_list = 0;
-	while(lst)
+	while (lst)
 	{
 		next_node = ft_lstnew(f(lst->content));
 		if (!next_node)
