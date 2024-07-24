@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_listsize.c                                      :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/23 15:25:01 by jslusark          #+#    #+#             */
-/*   Updated: 2024/07/23 15:35:57 by jslusark         ###   ########.fr       */
+/*   Created: 2024/07/24 11:23:16 by jslusark          #+#    #+#             */
+/*   Updated: 2024/07/24 13:38:14 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}			t_list;
+#include "../libft.h"
 
-int	ft_lstsize(t_list *lst)
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	int	i;
+	t_list	*next;
 
-	i = 0;
-	while (lst)
+	if (!lst || !del || !*lst)
+		return ;
+
+	while ((*lst)->next != NULL)
 	{
-		i++;
-		lst = lst->next;
+		next = (*lst)->next;
+		ft_lstdelone(*lst, del);
+		*lst = next;
 	}
-	return (i);
+	ft_lstdelone(*lst, del);
+	*lst = NULL;
 }

@@ -6,17 +6,11 @@
 /*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/23 12:15:06 by jslusark          #+#    #+#             */
-/*   Updated: 2024/07/23 16:49:57 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/07/24 13:39:46 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}			t_list;
+#include "../libft.h"
 
 t_list	*ft_lstnew(void *content)
 {
